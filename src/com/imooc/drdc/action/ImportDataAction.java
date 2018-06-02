@@ -269,10 +269,6 @@ public class ImportDataAction extends ActionSupport {
 	}
 	/**
 	 * 获取单元格值，并且进行校验
-	 * @author David
-	 * @param cell
-	 * @param td
-	 * @return
 	 */
 	private String getCellValue(HSSFCell cell, Element td) {
 		//首先获取单元格位置
@@ -325,7 +321,6 @@ public class ImportDataAction extends ActionSupport {
 	}
 	/**
 	 * 动态获取表头信息
-	 * @author David
 	 */
 	public void columns(){
 		HttpServletResponse response = ServletActionContext.getResponse();

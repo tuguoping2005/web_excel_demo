@@ -20,8 +20,6 @@ import com.imooc.drdc.utils.ExportUtils;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- *  学生管理
- * @author David
  *
  */
 public class StudentAction extends ActionSupport {
@@ -114,7 +112,7 @@ public class StudentAction extends ActionSupport {
 
 	
 	
-	//数据列表
+	//获取学生列表
 	public void list(){
 		HttpServletResponse response = ServletActionContext.getResponse();
 		response.setContentType("text/html;charset=utf-8");
@@ -140,8 +138,7 @@ public class StudentAction extends ActionSupport {
 		return slist;
 	}
 	/**
-	 * 导出前台列表为excel文件
-	 * @author David
+	 * 	导出前台列表为excel的文件
 	 */
 	public void export(){
 		HttpServletResponse response = ServletActionContext.getResponse();
@@ -159,7 +156,7 @@ public class StudentAction extends ActionSupport {
 			titles = new String(titles.getBytes("ISO-8859-1"),"UTF-8");
 			ExportUtils.outputHeaders(titles.split(","), sheet);
 			ExportUtils.outputColumns(fields.split(","), list, sheet, 1);
-			//获取输出流，写入excel 并关闭
+			//获取输出流 写出并关闭
 			ServletOutputStream out = response.getOutputStream();
 			wb.write(out);
 			out.flush();

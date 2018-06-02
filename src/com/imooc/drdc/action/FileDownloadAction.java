@@ -192,10 +192,6 @@ public class FileDownloadAction extends ActionSupport {
 	
 	/**
 	 * 测试单元格样式
-	 * @author David
-	 * @param wb
-	 * @param cell
-	 * @param td
 	 */
 	private static void setType(HSSFWorkbook wb, HSSFCell cell, Element td) {
 		Attribute typeAttr = td.getAttribute("type");
@@ -233,9 +229,6 @@ public class FileDownloadAction extends ActionSupport {
 
 	/**
 	 * 设置列宽
-	 * @author David
-	 * @param sheet
-	 * @param colgroup
 	 */
 	private static void setColumnWidth(HSSFSheet sheet, Element colgroup) {
 		List<Element> cols = colgroup.getChildren("col");
